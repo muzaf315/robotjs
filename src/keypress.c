@@ -280,6 +280,12 @@ void typeString(const char *str)
 
 void typeStringDelayed(const char *str, const unsigned cpm)
 {
+	unsigned short c;
+	unsigned short c1;
+	unsigned short c2;
+	unsigned short c3;
+	unsigned long n;
+	
 	/* Characters per second */
 	const double cps = (double)cpm / 60.0;
 
