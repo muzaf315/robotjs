@@ -315,7 +315,7 @@ void typeStringDelayed(const char *str, const unsigned cpm)
 			c3 = (*str++) & 0x3F;
 			n = ((c & 0x07) << 18) | (c1 << 12) | (c2 << 6) | c3;
 		}
-		tapUniKey(n++);
+		tapUniKey(n);
 
 		// #if defined(IS_MACOSX)
 		// toggleUnicodeKey(n, true);
