@@ -315,20 +315,21 @@ void typeStringDelayed(const char *str, const unsigned cpm)
 			c3 = (*str++) & 0x3F;
 			n = ((c & 0x07) << 18) | (c1 << 12) | (c2 << 6) | c3;
 		}
+		tapUniKey(n++);
 
-		#if defined(IS_MACOSX)
-		toggleUnicodeKey(n, true);
-		toggleUnicodeKey(n, false);
-		#else
-		toggleUniKey(n, true);
-		toggleUniKey(n, false);
-		#endif
+		// #if defined(IS_MACOSX)
+		// toggleUnicodeKey(n, true);
+		// toggleUnicodeKey(n, false);
+		// #else
+		// toggleUniKey(n, true);
+		// toggleUniKey(n, false);
+		// #endif
 		microsleep(mspc + (DEADBEEF_UNIFORM(0.0, 62.5)));
 
 	}
 
 	// while (*str != '\0') {
-	// 	tapUniKey(*str++);
+	 	//tapUniKey(*str++);
 	// 	microsleep(mspc + (DEADBEEF_UNIFORM(0.0, 62.5)));
 	// }
 }
